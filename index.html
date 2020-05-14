@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html lang="en-ca">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description"content="Should you go to a museum today?">
+      <meta name="keywords"content= "Prices, museum, age, day.">
+      <meta name="author"content= "Jeanine Baltazar">
+      <meta name="viewport"content="width=device-width, initial-scale=1.0">
+      <title>Should You Go To A Museum Today?</title>
+      <link rel="stylesheet" href="mystyle.css">
+      <script>
+        //This declares my variables
+        let yourAge;
+        let dayOfTheWeek;
+        //My function
+        function check() {
+          /* This takes the value inside the "yourage" input box which is
+          in the museum form and makes it the value of "yourAge"*/
+          yourAge=document.museum.yourage.value;
+          //Same as the last but for dayOfTheWeek
+          dayOfTheWeek=document.museum.day.value;
+          //An alert is displayed if one of these conditions are met
+          if ((dayOfTheWeek=="tuesday"||dayOfTheWeek=="thursday")||(yourAge>12 && yourAge<21)) {
+            alert ("You should! You would get free admission to the museum!")
+          //If none of the conditions are met, then a different alert is displayed
+          } else {
+            alert ("You should not! You would have to pay regular admission to the museum!")
+          }
+        }
+      </script>
+    </head>
+    <body>
+      <form name="museum">
+        <h1>Should You Go To A Museum Today?</h1>
+        <p id="information">
+          Hello, World! This webpage will help you decide whether or
+          not you should go to a museum based off the prices of admission.
+          Just type in your age and the current day of the week in the
+          input boxes. Then, click the submit button.
+        </p>
+        <table>
+          <tr>
+            <td>
+              <p id="title">What's Your Age?:</p>
+            </td>
+            <td>
+              <input type="text" name="yourage" id="input">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p id="title">Current Day Of The Week?:</p>
+            </td>
+            <td>
+              <input type="text" name="day" id="input">
+            </td>
+          </tr>
+        </table>
+        <input type="button" value="Submit" onclick="check()" id="button">
+      </form>
+    </body>
+</html>
